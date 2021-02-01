@@ -9,3 +9,10 @@
 .nav-item a:hover{
     color: darkblue;
 }
+.nav-item a{
+    color: black;
+}
+.repinta-bg{
+    color: black;
+    background-color:whitesmoke;
+}
