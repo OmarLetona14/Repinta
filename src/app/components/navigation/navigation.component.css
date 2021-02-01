@@ -1,0 +1,9 @@
+.nav-item {
+    margin-left: 50px;
+}
+
+.nav-item:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2);
+}
