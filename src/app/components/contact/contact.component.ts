@@ -56,6 +56,7 @@ export class ContactComponent implements OnInit {
     this.contactForm = this.fb.group({
       // Estructura [valor inicial, validaciones  ]
       name: ['', [Validators.required]],
+      phone: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
       message: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]],
     });
