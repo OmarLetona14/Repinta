@@ -3,4 +3,6 @@
   <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
-<app-buttons></app-buttons>
+<ng-container *ngIf="!mobile">
+  <app-buttons></app-buttons>
+</ng-container>
