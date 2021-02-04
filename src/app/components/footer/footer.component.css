@@ -1,0 +1,22 @@
+.footer-info{
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-title{
+    color: #ECA210;
+}
+
+.info-description{
+    color:white;
+
+}
+
+.bg-footer{
+    background-color: transparent;
+    
+}
