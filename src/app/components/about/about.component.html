@@ -15,10 +15,15 @@
 <hr style="background-color: #ECA210; height: 5px;">
 <div class="row text-center">
     <div class="col-md-4">
-        <div class="card">
+        <div class="card" (mouseover)="over = true">
             <div class="card-header">
                 <h1>Mision <i class="fas fa-arrow-right"></i></h1>
             </div>
+            <ng-container *ngIf="over">
+                <div class="card-body">
+                    Nuestra mision es ...
+                </div>
+            </ng-container>
         </div>
     </div>
     <div class="col-md-4">

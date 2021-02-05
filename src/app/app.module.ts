@@ -18,6 +18,7 @@ import { SpinnerService } from './services/spinner.service';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     AboutComponent,
     ButtonsComponent,
     SpinnerComponent,
-    GalleryComponent
+    GalleryComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

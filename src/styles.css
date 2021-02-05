@@ -10,10 +10,14 @@ body{
     margin: 0;*/
     background-repeat: no-repeat;
     background-size:cover;
-    background-image: url('https://th.bing.com/th/id/R8166ce752069e7df3a55b993fe9ae1d4?rik=fhFVsVixZ1YnnA&riu=http%3a%2f%2fbgfons.com%2fuploads%2firon%2firon_texture637.jpg&ehk=uwou%2bkwLCQz6nYsBNtkdHoDx4Uyq7A7tD0tqxY%2bI6oU%3d&risl=&pid=ImgRaw');
+    background-image: url('./assets/iron-bgimage.jfif');
 }
 
 html {
     min-height: 100%;
     margin: 0;
+}
+
+hr{
+    border-top: 5px solid #ECA210;
 }

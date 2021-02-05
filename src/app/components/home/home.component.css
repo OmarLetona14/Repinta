@@ -5,7 +5,7 @@
     overflow: hidden;
     position: relative;
     border-radius: 10%;
-    
+    border: 1px solid black;
 }
 .card-img .imgBx,
 .card-img .details {
@@ -57,9 +57,7 @@ h1.page-title{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-hr.separator{
-    border-top: 5px solid #ECA210;
-}
+
 
 .card{
     border: 0px;
