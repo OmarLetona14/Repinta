@@ -19,7 +19,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,8 +44,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     NgxSpinnerModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    //AngularFireAuthModule, 
-   // AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [
     SpinnerService,

@@ -1,5 +1,5 @@
 <form novalidate class="row g-3" (ngSubmit)="onSaveData()" [formGroup]="contactForm">
-    <div class="col-md-6">
+    <div class="col-md-6 p-4">
       <label class="form-label text-white"><i class="far fa-user"></i> Nombre <small style="color:#ECA210">*</small></label>
       <input type="text" class="form-control shadow-lg rounded-pill" id="name" placeholder="Nombre" formControlName="name" [class]="validField('name')">
       <div class="invalid-feedback">
@@ -7,9 +7,8 @@
           <strong style="color:#ECA210"> Debe escribir un nombre.</strong>
         </span>
       </div>
-      <hr>
     </div> 
-    <div class="col-md-6">
+    <div class="col-md-6 p-4">
         <label class="form-label text-white"><i class="fas fa-phone-alt"></i> Numero de telefono <small style="color:#ECA210">*</small></label>
         <input type="number" class="form-control shadow-lg rounded-pill" id="phone" placeholder="Telefono" formControlName="phone" 
         [class]="validField('phone')">
@@ -18,9 +17,8 @@
             <strong style="color:#ECA210">Por favor, introduzca un telefono.</strong>
           </span>
         </div>
-        <hr>
     </div> 
-    <div class="col-md-12">
+    <div class="col-md-12 p-4">
         <label class="form-label text-white"><i class="far fa-envelope"></i> Correo electronico <small style="color:#ECA210">*</small></label>
         <input type="email" class="form-control shadow-lg rounded-pill" id="email" placeholder="Email" formControlName="email" [class]="validField('email')">
         <div class="invalid-feedback">
@@ -31,9 +29,8 @@
             <strong style="color:#ECA210">Correo electronico no valido.</strong>
           </span>
         </div>
-        <hr>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 p-4">
         <label class="form-label text-white"><i class="far fa-comment-dots"></i> Mensaje <small style="color:#ECA210">*</small></label>
         <textarea id="message" cols="30" rows="5" class="form-control shadow-lg rounded-end" placeholder="Write message..." formControlName="message" [class]="validField('message')">
         </textarea>
