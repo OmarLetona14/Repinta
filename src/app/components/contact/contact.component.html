@@ -12,9 +12,16 @@
         <label class="form-label text-white"><i class="fas fa-phone-alt"></i> Numero de telefono <small style="color:#ECA210">*</small></label>
         <input type="number" class="form-control shadow-lg rounded-pill" id="phone" placeholder="Telefono" formControlName="phone" 
         [class]="validField('phone')">
-        <div class="invalid-feedback">
+        <div class="invalid-feedback">  
           <span *ngIf="contactForm.get('phone').errors?.required">
             <strong style="color:#ECA210">Por favor, introduzca un telefono.</strong>
+          </span>
+          <span *ngIf="contactForm.get('phone').errors?.maxlength">
+            <strong style="color:#ECA210"> Su telefono no puede ser mayor de 8 digitos. Por favor,<br>
+            escriba solo digitos, sin guiones.</strong>
+          </span>
+          <span *ngIf="contactForm.get('phone').errors?.minlength">
+            <strong style="color:#ECA210">Telefono invalido.</strong>
           </span>
         </div>
     </div> 
