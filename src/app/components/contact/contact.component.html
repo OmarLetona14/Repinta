@@ -16,12 +16,8 @@
           <span *ngIf="contactForm.get('phone').errors?.required">
             <strong style="color:#ECA210">Por favor, introduzca un telefono.</strong>
           </span>
-          <span *ngIf="contactForm.get('phone').errors?.maxlength">
-            <strong style="color:#ECA210"> Su telefono no puede ser mayor de 8 digitos. Por favor,<br>
-            escriba solo digitos, sin guiones.</strong>
-          </span>
-          <span *ngIf="contactForm.get('phone').errors?.minlength">
-            <strong style="color:#ECA210">Telefono invalido.</strong>
+          <span *ngIf="contactForm.get('phone').errors?.pattern">
+            <strong style="color:#ECA210">Telefono no valido, por favor escriba solo digitos, sin guiones ni espacios (XXXXXXXX).</strong>
           </span>
         </div>
     </div> 
@@ -39,7 +35,7 @@
     </div>
     <div class="col-md-12 p-4">
         <label class="form-label text-white"><i class="far fa-comment-dots"></i> Mensaje <small style="color:#ECA210">*</small></label>
-        <textarea id="message" cols="30" rows="5" class="form-control shadow-lg rounded-end" placeholder="Write message..." formControlName="message" [class]="validField('message')">
+        <textarea id="message" cols="30" rows="5" class="form-control shadow-lg rounded-end" placeholder="Escriba un mensaje..." formControlName="message" [class]="validField('message')">
         </textarea>
         <div class="invalid-feedback">
           <span *ngIf="contactForm.get('message').errors?.required">
@@ -58,5 +54,5 @@
            <i class="fas fa-exclamation-circle" *ngIf="!contactForm.valid"></i> 
         </button>
     </div>
-</form> 
-  
+</form>
+<app-spinner></app-spinner>

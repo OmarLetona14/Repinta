@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
 
   public contactForm:FormGroup;
   private emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+  private phonePattern = /^[0-9]{8}$/;
   constructor(private fb:FormBuilder, private spinner:SpinnerService, private contactService:ContactService) { }
 
   ngOnInit(): void {
@@ -20,26 +21,25 @@ export class ContactComponent implements OnInit {
   }
 
   async onSaveData():Promise<void>{
-    console.log("on log");
     if (this.contactForm.valid){
       const formValues = this.contactForm.value;
-      console.log("valores", formValues);
+      this.spinner.getSpinner();
       try {
-        this.spinner.getSpinner();
         this.contactService.saveContact(formValues).then((results)=>{
           Swal.fire('Mensaje enviado', `<strong>
           Su mensaje ha sido enviado, <br>
           pronto nos pondremos en contacto
           con usted.</strong>`, 'success');
           this.contactForm.reset();
+          this.spinner.stopSpinner();
         }).catch((error)=>{
           console.log(error);
           Swal.fire('Ocurrio un error', `<strong>
           Ocurrio un error al intentar enviar su mensaje <br>
           por favor, intentelo de nuevo.
           </strong>`, 'error');
+          this.spinner.stopSpinner();
         });
-        this.spinner.stopSpinner();
       } catch (error) {
         console.log(error);
         Swal.fire('Ocurrio un error', `<strong>
@@ -74,7 +74,7 @@ export class ContactComponent implements OnInit {
     this.contactForm = this.fb.group({
       // Estructura [valor inicial, validaciones  ]
       name: ['', [Validators.required]],
-      phone: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(8)]],
+      phone: ['', [Validators.required, Validators.pattern(this.phonePattern)]],
       email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
       message: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]],
     });
