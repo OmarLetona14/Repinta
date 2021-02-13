@@ -1,17 +1,31 @@
-<a class="btn btn-lg rounded-circle shadow-lg"
-    href="" target="_blank" 
-    style="position: fixed; right: 40px; bottom: 240px; font-size: 25px; background-color: #3b5998;color: white;">
-        <i class="fab fa-facebook"></i>
-</a>
-<a class="btn btn-lg rounded-circle shadow-lg web"
-    href="" target="_blank" 
-    style="position: fixed; right: 40px; bottom: 160px; font-size: 25px; background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); ;color: white;">
-        <i class="fab fa-instagram"></i>
-</a>
-<a class="btn btn-lg rounded-circle shadow-lg web"
-    href="" target="_blank"     
-    style="position: fixed; right: 40px; bottom: 80px; font-size: 25px; background-color: #25d366;color: white;">
-        <i class="fab fa-whatsapp"></i>
-</a>
+<ng-container *ngIf="hide">
+    <button class="show" (click)="hide=false;">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </button>
+</ng-container>
+<ng-container *ngIf="!hide">
+    <div class="container" class="container-buttons">
+        <ng-container *ngIf="!hide">
+            <button class="hidden-button" (click)="hide=true;">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </ng-container>
+        <a class="btn btn-lg rounded-circle shadow-lg"
+        href="https://www.facebook.com/Repinta-Guatemala-358747865080953" target="_blank" 
+        style="position: fixed; right: 40px; bottom: 240px; font-size: 25px; background-color: #3b5998;color: white;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a class="btn btn-lg rounded-circle shadow-lg web"
+            href="" target="_blank" 
+            style="position: fixed; right: 40px; bottom: 160px; font-size: 25px; background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+            background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); ;color: white;">
+                <i class="fab fa-instagram"></i>
+        </a>
+        <a class="btn btn-lg rounded-circle shadow-lg web"
+            href="" target="_blank"     
+            style="position: fixed; right: 40px; bottom: 80px; font-size: 25px; background-color: #25d366;color: white;">
+                <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+</ng-container>

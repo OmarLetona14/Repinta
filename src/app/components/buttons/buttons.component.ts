@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
 
+  hide:boolean = false;
   constructor() { }
 
   ngOnInit(): void {

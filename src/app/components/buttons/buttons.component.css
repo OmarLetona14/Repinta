@@ -17,3 +17,40 @@ a:hover {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+.container-buttons{
+  border-radius: 15%;
+  position: fixed; 
+  right: 0px; 
+  bottom: 40px;
+  width: 115px;
+  height: 300px;
+  background-color: transparent ;
+  border: 0;
+}
+
+.hidden-button{
+  color: #ECA210;
+  border-radius: 15%;
+  background-color: transparent;
+  position: fixed; 
+  right: 110px; 
+  bottom: 150px;
+  border: 0;
+  font-size: 50px;
+}
+
+.hidden-button:hover{
+  background-color: white;
+  color: black;
+}
+
+.show{
+  border-radius: 15%;
+  background-color: white;
+  position: fixed; 
+  right: 0px; 
+  bottom: 150px;
+  border: 0;
+  font-size: 50px;
+}

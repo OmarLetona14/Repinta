@@ -8,6 +8,7 @@ svg{
     height: 325px;
     text-align: center;
     fill: #ECA210;
+    padding: 0;
 }
 path#XMLID_5_ {
    
@@ -40,7 +41,7 @@ path#XMLID_11_ ,path#XMLID_2_ {
 }
 
 .message:after, .message:before {
-    font-size: 75px;
+    font-size: 45px;
   color: #ECA210;
   -webkit-animation-name: opacity;
   -webkit-animation-duration: 2s;

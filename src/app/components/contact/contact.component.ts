@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
 
   async onSaveData():Promise<void>{
     if (this.contactForm.valid){
-      const formValues = this.contactForm.value;
+      const formValues = this.contactForm.value;  
       this.spinner.getSpinner();
       try {
         this.contactService.saveContact(formValues).then((results)=>{
