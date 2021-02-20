@@ -54,3 +54,31 @@ a:hover {
   border: 0;
   font-size: 50px;
 }
+
+.btn-instagram{
+  position: fixed;
+  right: 40px; 
+  bottom: 160px; 
+  font-size: 25px; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); ;color: white;
+}
+
+.btn-whatsapp{
+  position: fixed; 
+  right: 40px; 
+  bottom: 80px; 
+  font-size: 25px; 
+  background-color: #25d366;
+  color: white;
+}
+
+.btn-facebook{
+  position: fixed; 
+  right: 40px; 
+  bottom: 240px; 
+  font-size: 25px; 
+  background-color: #3b5998;
+  color: white;
+}

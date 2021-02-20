@@ -1,51 +1,51 @@
 <form novalidate class="row g-3" (ngSubmit)="onSaveData()" [formGroup]="contactForm">
     <div class="col-md-6 p-4">
-      <label class="form-label text-white"><i class="far fa-user"></i> Nombre <small style="color:#ECA210">*</small></label>
+      <label class="form-label text-white"><i class="far fa-user"></i> Nombre <small class="required">*</small></label>
       <input type="text" class="form-control shadow-lg rounded-pill" id="name" placeholder="Nombre" formControlName="name" [class]="validField('name')">
       <div class="invalid-feedback">
         <span *ngIf="contactForm.get('name').errors?.required">
-          <strong style="color:#ECA210"> Debe escribir un nombre.</strong>
+          <strong class="required"> Debe escribir un nombre.</strong>
         </span>
       </div>
     </div> 
     <div class="col-md-6 p-4">
-        <label class="form-label text-white"><i class="fas fa-phone-alt"></i> Numero de telefono <small style="color:#ECA210">*</small></label>
+        <label class="form-label text-white"><i class="fas fa-phone-alt"></i> Numero de telefono <small class="required">*</small></label>
         <input type="number" class="form-control shadow-lg rounded-pill" id="phone" placeholder="Telefono" formControlName="phone" 
         [class]="validField('phone')">
         <div class="invalid-feedback">  
           <span *ngIf="contactForm.get('phone').errors?.required">
-            <strong style="color:#ECA210">Por favor, introduzca un telefono.</strong>
+            <strong class="required">Por favor, introduzca un telefono.</strong>
           </span>
           <span *ngIf="contactForm.get('phone').errors?.pattern">
-            <strong style="color:#ECA210">Telefono no valido, por favor escriba solo digitos, sin guiones ni espacios (XXXXXXXX).</strong>
+            <strong class="required">Telefono no valido, por favor escriba solo digitos, sin guiones ni espacios (XXXXXXXX).</strong>
           </span>
         </div>
     </div> 
     <div class="col-md-12 p-4">
-        <label class="form-label text-white"><i class="far fa-envelope"></i> Correo electronico <small style="color:#ECA210">*</small></label>
+        <label class="form-label text-white"><i class="far fa-envelope"></i> Correo electronico <small class="required">*</small></label>
         <input type="email" class="form-control shadow-lg rounded-pill" id="email" placeholder="Email" formControlName="email" [class]="validField('email')">
         <div class="invalid-feedback">
           <span *ngIf="contactForm.get('email').errors?.required">
-            <strong style="color:#ECA210">Por favor, introduzca un correo electronico.</strong>
+            <strong class="required">Por favor, introduzca un correo electronico.</strong>
           </span>
           <span *ngIf="contactForm.get('email').errors?.pattern">
-            <strong style="color:#ECA210">Correo electronico no valido.</strong>
+            <strong class="required">Correo electronico no valido.</strong>
           </span>
         </div>
     </div>
     <div class="col-md-12 p-4">
-        <label class="form-label text-white"><i class="far fa-comment-dots"></i> Mensaje <small style="color:#ECA210">*</small></label>
+        <label class="form-label text-white"><i class="far fa-comment-dots"></i> Mensaje <small class="required">*</small></label>
         <textarea id="message" cols="30" rows="5" class="form-control shadow-lg rounded-end" placeholder="Escriba un mensaje..." formControlName="message" [class]="validField('message')">
         </textarea>
         <div class="invalid-feedback">
           <span *ngIf="contactForm.get('message').errors?.required">
-            <strong style="color:#ECA210">Por favor, introduzca un mensaje</strong>
+            <strong class="required">Por favor, introduzca un mensaje</strong>
           </span>
           <span *ngIf="contactForm.get('message').errors?.maxlength">
-            <strong style="color:#ECA210"> Su mensaje no puede ser mayor de 150 caracteres. </strong>
+            <strong class="required"> Su mensaje no puede ser mayor de 150 caracteres. </strong>
           </span>
           <span *ngIf="contactForm.get('message').errors?.minlength">
-            <strong style="color:#ECA210"> Su mensaje no puede ser menor de 5 caracteres. </strong>
+            <strong class="required"> Su mensaje no puede ser menor de 5 caracteres. </strong>
           </span>
         </div>
       </div>
@@ -55,4 +55,3 @@
         </button>
     </div>
 </form>
-<app-spinner></app-spinner>

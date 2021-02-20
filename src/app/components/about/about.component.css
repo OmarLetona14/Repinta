@@ -7,3 +7,12 @@
     object-fit: cover;
     object-position: bottom;
 }
+
+@media (min-width:321px) and (max-width: 770px)
+{
+ #logo
+ {
+  height:80px;
+  width:80px;
+ }
+}
