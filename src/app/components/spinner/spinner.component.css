@@ -1,0 +1,10 @@
+.spinner-repinta{
+    position:relative;
+    color: #ECA210;
+}
+
+.container-spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
